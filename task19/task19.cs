@@ -22,8 +22,8 @@ else
         //Console.WriteLine(digits[i]);
     }
 
-    if (digits[4] == digits[0] && digits[3] == digits[1]) Console.WriteLine("The number is a polynom.");
-    else Console.WriteLine("The number is not a polynom.");
+    if (digits[4] == digits[0] && digits[3] == digits[1]) Console.WriteLine("The number is a palindrome.");
+    else Console.WriteLine("The number is not a palindrome.");
 }
 
 */
@@ -34,5 +34,5 @@ Console.Write("Input 5-didgit number: ");
 string num = Console.ReadLine();
 
 if (num.Length != 5) Console.WriteLine("Wrong input.");
-else if (num[0] == num[4] && num[1] == num[3]) Console.WriteLine("The number is a polynom.");
-else Console.WriteLine("The number is not a polynom.");
+else if (num[0] == num[4] && num[1] == num[3]) Console.WriteLine("The number is a palindrome.");
+else Console.WriteLine("The number is not a palindrome.");
