@@ -15,5 +15,5 @@ int SumOfDigits(int num)
     return sum;
 }
 
-Console.Write("The sum of the digits in" + inputNum + " is equal to ");
+Console.Write("The sum of the digits in " + inputNum + " is equal to ");
 Console.WriteLine(SumOfDigits(inputNum));
