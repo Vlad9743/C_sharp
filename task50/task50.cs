@@ -23,21 +23,6 @@ int[,] BuildArray(int rows, int columns)// Функция для создани�
     return arr;
 }
 
-int ElementFinder (string[] numberInd, int[,] arr2)//функция для поиска элемента
-{
-    int columnNumber = Convert.ToInt32(numberInd[1]);
-    int rowNumber = Convert.ToInt32(numberInd[0]);
-    int foundElement = 0;
-
-    if (columnNumber > arr2.GetLength(0) || rowNumber > arr2.GetLength(1))
-    {
-        Console.WriteLine("There is no such element");
-    }
-    else foundElement =  arr2[rowNumber, columnNumber];
-    return foundElement;
-}
-
-
 //main
 int m = new Random().Next(2,10);
 int n = new Random().Next(2,10);
@@ -46,6 +31,10 @@ int[,] arr1 = BuildArray(m,n);
 Console.WriteLine("Input element index: ");
 string[] numberIndex = (Console.ReadLine()).Split(" ");
 
-//int result = ElementFinder(numberIndex, arr1);
-Console.WriteLine("-> " + ElementFinder(numberIndex, arr1));
-
+int columnNumber = Convert.ToInt32(numberIndex[1]);
+int rowNumber = Convert.ToInt32(numberIndex[0]);
+if (columnNumber > arr1.GetLength(0) || rowNumber > arr1.GetLength(1))
+{
+    Console.WriteLine("There is no such element");
+}
+else Console.WriteLine("-> " + arr1[rowNumber, columnNumber]);
