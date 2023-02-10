@@ -4,7 +4,7 @@
 int[,,] Array3dBuilder(int dimentionX, int dimentionY, int dimentionZ)
 {
     int[,,] builtArray = new int[dimentionX, dimentionY, dimentionZ];
-    int start = 0;
+    int start = 10;
     
     for (int i = 0; i < dimentionX; i++)
     {
@@ -39,8 +39,12 @@ void Print3dArray(int[,,] originalArray)
 
 //main
 int arrayDimention1 = 5;
-int arrayDimention2 = 2;
+int arrayDimention2 = 3;
 int arrayDimention3 = 7;
 
+if (arrayDimention1*arrayDimention2*arrayDimention3 > 89) Console.WriteLine("Не хватает двузначных чисел");
+else
+{
 int[,,] newArray = Array3dBuilder(arrayDimention1, arrayDimention2, arrayDimention3);
 Print3dArray(newArray);
+}
